@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Login = () => {
+const Signup = () => {
   return (
     <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8">
@@ -21,7 +21,7 @@ const Login = () => {
 
       <div>
         <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-5">
-          Login
+          Signup
         </button>
       </div>
     </form>
@@ -30,4 +30,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signup
