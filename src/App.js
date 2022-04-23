@@ -9,6 +9,7 @@ import Resources from "./Components/Resources";
 import Profile from "./Components/Profile";
 import Signup from './Components/Signup';
 import Navbar from './Components/Navbar';
+import AddContent from './Components/AddContent';
 function App() {
   return (
     <div class="">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/resources" element = {<Resources/>} />
           <Route path="/profile" element = {<Profile/>} />
           <Route path="/signup" element = {<Signup/>} />
+          <Route path="/addContent" element = {<AddContent/>} />
       </Routes>
       </div>
     </div>
