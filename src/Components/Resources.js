@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import axios from "axios";
 
 const Resources = (props) => {
+	const navigate = useNavigate();
+
+	const [posts, setPosts] = useState([]);
+
+	useEffect(() => {
+		axios.get("/posts").then((res) => {
+			setPosts(res.data);
+		});
+	}, []);
+
 	if (props.loggedIn) {
 		return (
 			<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -50,72 +60,21 @@ const Resources = (props) => {
 						<div class="rounded-lg"></div>
 					</div>
 					<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-						<div class="w-full border border-gray-200 rounded-lg shadow-lg">
-							<div class="flex flex-col items-center justify-center p-10">
-								<h2 class="text-lg font-medium text-center">
-									What is space exploration?
-								</h2>
-								<p class="font-medium text-blue-700">Video</p>
-								<p class="text-black">Anonymous</p>
-								<p class="py-3"></p>
-								<img
-									src={require("./Pictures/SpaceExploration.jpg")}
-									height={300}
-									width={300}
-								></img>
-							</div>
-						</div>
-						<div class="w-full border border-gray-200 rounded-lg shadow-lg">
-							<div class="flex flex-col items-center justify-center p-10">
-								<h2 class="text-lg font-medium text-center">
-									UFO Spotted Outside Home In Bentonville, Arkansas, Sources
-									Say.
-								</h2>
-								<p class="font-medium text-blue-700">News</p>
-								<p class="text-black">InstaUNT</p>
-								<p class="py-3"></p>
-								<img
-									src={require("./Pictures/UFO.jpg")}
-									height={300}
-									width={300}
-								></img>
-							</div>
-						</div>
-						<div class="w-full border border-gray-200 rounded-lg shadow-lg">
-							<div class="flex flex-col items-center justify-center p-10">
-								<h2 class="text-lg font-medium text-center">Our Universe...</h2>
-								<p class="font-medium text-blue-700">Website</p>
-								<p class="text-black">Etash Bhat</p>
-								<p class="py-3"></p>
-								<img
-									src={require("./Pictures/SolarSystem.jpg")}
-									height={300}
-									width={300}
-								></img>
-							</div>
-						</div>
-						<div class="w-full border border-gray-200 rounded-lg shadow-lg">
-							<div class="flex flex-col items-center justify-center p-10">
-								<h2 class="text-lg font-medium text-center">
-									What is space exploration?
-								</h2>
-								<p class="font-medium text-blue-700">Video</p>
-								<p class="text-black">Person 1</p>
-								<img src={"./".default} />
-								<img src="../Space Exploration.jpg"></img>
-							</div>
-						</div>
-						<div class="w-full border border-gray-200 rounded-lg shadow-lg">
-							<div class="flex flex-col items-center justify-center p-10">
-								<h2 class="text-lg font-medium text-center">
-									What is space exploration?
-								</h2>
-								<p class="font-medium text-blue-700">Video</p>
-								<p class="text-black">Person 1</p>
-								<img src={"./".default} />
-								<img src="../Space Exploration.jpg"></img>
-							</div>
-						</div>
+						{posts.map((post) => (
+							<button
+								class="w-full border border-gray-200 rounded-lg shadow-lg hover:bg-slate-200"
+								onClick={() => {
+									navigate("/" + post._id);
+								}}
+							>
+								<div class="flex flex-col items-center justify-center p-10">
+									<h2 class="text-lg font-medium text-center">{post.title}</h2>
+									<p class="font-medium text-blue-700">{post.type}</p>
+									<p class="py-3"></p>
+									<img src={post.img} />
+								</div>
+							</button>
+						))}
 					</div>
 				</div>
 			</div>

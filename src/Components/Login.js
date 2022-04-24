@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Navigate } from "react-router-dom";
+import { sha256 } from "js-sha256";
 
 const Login = (props) => {
 	const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Login = (props) => {
 		event.preventDefault();
 		const data = {
 			email,
-			password,
+			password: sha256(password),
 		};
 
 		axios.post("/auth/login", data).then((res) => {

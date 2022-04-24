@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { sha256 } from "js-sha256";
 
 const Signup = () => {
 	const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Signup = () => {
 		event.preventDefault();
 		const data = {
 			email,
-			password,
+			password: sha256(password),
 			firstName,
 			lastName,
 		};
@@ -29,7 +30,7 @@ const Signup = () => {
 			<div class="max-w-md w-full space-y-8">
 				<div>
 					<h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-						Sign in to your account
+						Sign Up
 					</h2>
 				</div>
 				<form class="mt-8 space-y-6" onSubmit={onSubmit}>

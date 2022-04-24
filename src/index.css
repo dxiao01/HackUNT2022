@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .hide-scrollbar-chrome::-webkit-scrollbar {
-        display: none;
-      } 
+	/* Chrome, Safari and Opera */
+	.hide-scrollbar-chrome::-webkit-scrollbar {
+		display: none;
+	}
 
-      .hide-scrollbar-firefox {
-        -ms-overflow-style: none;
-        scrollbar-width: none; 
-      }
-      ::-webkit-scrollbar {
-        display: none;
-      }
+	.hide-scrollbar-firefox {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
 }

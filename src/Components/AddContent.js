@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const AddContent = () => {
-	const [loggedIn, setLoggedIn] = useState(true);
+const AddContent = (props) => {
+	const navigate = useNavigate();
+
 	const [title, setTitle] = useState("");
 	const [type, setType] = useState("");
 	const [description, setDescription] = useState("");
 	const [link, setLink] = useState("");
 	const [thumbnail, setThumbnail] = useState([]);
-	const [user, setUser] = useState({});
 
 	const reader = new FileReader();
 	reader.onloadend = (event) => {
@@ -17,17 +17,6 @@ const AddContent = () => {
 			setThumbnail(event.target.result);
 		}
 	};
-
-	useEffect(() => {
-		axios
-			.get("/auth/verifyToken")
-			.then((res) => {
-				setUser(res.data);
-			})
-			.catch((err) => {
-				setLoggedIn(false);
-			});
-	}, []);
 
 	const onSubmit = (event) => {
 		event.preventDefault();
@@ -39,19 +28,23 @@ const AddContent = () => {
 				upload_preset: "hackunt2022",
 			})
 			.then((res) => {
-				const img = res.url;
-				axios.post("/posts/addPost", {
-					email: user.email,
-					title,
-					description,
-					img,
-					type,
-					link,
-				});
+				const img = res.data.url;
+				axios
+					.post("/posts/addPost", {
+						title,
+						description,
+						img,
+						type,
+						link,
+					})
+					.then((res) => {
+						props.refresh("added post");
+						navigate("/resources");
+					});
 			});
 	};
 
-	if (loggedIn) {
+	if (props.loggedIn) {
 		return (
 			<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
 				<div class="max-w-md w-full space-y-8">

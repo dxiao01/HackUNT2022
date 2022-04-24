@@ -1,6 +1,16 @@
+import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
+import axios from "axios";
 
 const Profile = (props) => {
+	const [posts, setPosts] = useState([]);
+
+	useEffect(() => {
+		axios.get("/posts/user/" + props.user._id).then((res) => {
+			setPosts(res.data);
+		});
+	}, [props.user]);
+
 	if (props.loggedIn) {
 		return (
 			<div class="flex items-center justify-center">
@@ -10,84 +20,29 @@ const Profile = (props) => {
 						<h1 class="text-gray-800 font-extrabold text-3xl mt-5">
 							{props.user.firstName} {props.user.lastName}
 						</h1>
+						<h1 class="text-gray-600 text-sm text-center">
+							{props.user.email}
+						</h1>
 						<h1 class="text-gray-500 text-sm">
 							Total Points: {props.user.points}
 						</h1>
-						<h1 class="text-gray-600 text-1xl p-2 text-center">
-							Bio: Hi, I am Person XYZ! I love to create and post information
-							about the universe and future space exploration. Reach out to me
-							if you have any questions.
-						</h1>
-						<h1 class="text-gray-600 text-1xl p-2 text-center">
-							(123)456-7890 --OR-- personxyz@gmail.com
-						</h1>
-						<h1 class="text-gray-500 text-sm">Post count: xxx</h1>
+						<h1 class="text-gray-500 text-sm">Post count: {posts.length}</h1>
 					</div>
 					<div class="flex items-center justify-center pt-10 flex-col">
 						<h1 class="text-gray-800 font-extrabold text-3xl mt-5">Posts</h1>
-						<div class="w-full px-12 mx-auto text-center">
-							<div class="grid grid-cols-1">
-								<div class="w-full	border-gray-200 rounded-lg shadow-lg">
-									<div class="flex justify-between p-10 max-h-80">
-										<div class="flex flex-col items-left justify-left p-10">
-											<h2 class="text-lg font-medium">
-												How NASA Reinvented The Wheel
-											</h2>
-											<p class="font-medium text-grey-100">Article</p>
-											<p class="text-black">Tags: Engineering, Materials</p>
-										</div>
-										<div>
-											<img
-												src="/wheel.jpeg"
-												class="h-60 w-60 object-scale-down"
-											></img>
-										</div>
+						<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+							{posts.map((post) => (
+								<button class="w-full border border-gray-200 rounded-lg shadow-lg hover:bg-slate-200">
+									<div class="flex flex-col items-center justify-center p-10">
+										<h2 class="text-lg font-medium text-center">
+											{post.title}
+										</h2>
+										<p class="font-medium text-blue-700">{post.type}</p>
+										<p class="py-3"></p>
+										<img src={post.img} />
 									</div>
-								</div>
-
-								<div class="w-full	border-gray-200 rounded-lg shadow-lg">
-									<div class="flex justify-between p-10 max-h-80">
-										<div class="flex flex-col items-left justify-left p-10">
-											<h2 class="text-lg font-medium">
-												MEGA Drive — the Tech That Promises Near Light-Speed
-												Travel!
-											</h2>
-											<p class="font-medium text-grey-100">Article</p>
-											<p class="text-black">
-												Tags: Theoretical Physics, Interstellar Travel,
-												Light-Speed
-											</p>
-										</div>
-										<div>
-											<img
-												src="/megaengine.jpeg"
-												class=" h-60 w-60 object-scale-down"
-											></img>
-										</div>
-									</div>
-								</div>
-
-								<div class="w-full	border-gray-200 rounded-lg shadow-lg">
-									<div class="flex justify-between p-10 max-h-80">
-										<div class="flex flex-col items-left justify-left p-10">
-											<h2 class="text-lg font-medium">
-												NASA’s Perseverance Rover arrives at delta for new
-												science campaign
-											</h2>
-											<p class="font-medium text-grey-100">News</p>
-											<p class="text-black">
-												Tags: Mars, Robotic Exploration, Mapping
-											</p>
-										</div>
-										<div>
-											<img
-												src="/mars.png"
-												class=" h-60 w-60 object-scale-down"
-											></img>
-										</div>
-									</div>
-								</div>
-							</div>
+								</button>
+							))}
 						</div>
 					</div>
 				</div>

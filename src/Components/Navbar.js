@@ -8,7 +8,7 @@ const Navbar = (props) => {
 
 	const logout = () => {
 		axios.post("/auth/logout").then(() => {
-			navigate("/login");
+			navigate("/");
 			props.refresh("logout");
 		});
 	};
@@ -78,9 +78,15 @@ const Navbar = (props) => {
 						<div class="absolute inset-y-0 right-0 flex items-center text-white">
 							<Link
 								to="/login"
-								class=" text-gray-800 bg-white px-3 py-2 rounded-md text-lg font-medium ml-5"
+								class=" text-gray-800 bg-slate-200 hover:bg-slate-400 px-3 py-2 rounded-l-md text-lg font-medium ml-5"
 							>
 								Login
+							</Link>
+							<Link
+								to="/signup"
+								class=" text-gray-800 bg-slate-200 hover:bg-slate-400 border-slate-300 border-l px-3 py-2 rounded-r-md text-lg font-medium"
+							>
+								Sign Up
 							</Link>
 						</div>
 					</div>
