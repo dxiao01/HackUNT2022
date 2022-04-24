@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { defineCustomElements } from "shooting-stars/dist/loader";
-import star from "./Pictures/whitestar.png";
 
 const Home = () => {
 	useEffect(() => {
@@ -14,7 +13,6 @@ const Home = () => {
 	return (
 		<div class="h-full py-8 scrollbar-hide bg-gray-900">
 			<shooting-stars
-				image={star}
 				height="5"
 				width="200"
 				min-speed="20"

@@ -9,22 +9,53 @@ const Post = (props) => {
 
 	useEffect(() => {
 		axios.get("/posts/" + postID).then((res) => {
-			console.log(post);
 			setPost(res.data);
+			axios.get("/auth/" + res.data.owner).then((res) => {
+				console.log(post);
+				setUser(res.data);
+				console.log(res.data);
+			});
 		});
 	}, []);
 
 	if (props.loggedIn) {
 		return (
-			<div class="flex">
-				<button class="w-full border border-gray-200 rounded-lg shadow-lg my-32 mx-96 -full">
-					<div class="flex flex-wrap p-10">
-						<h2 class="text-lg font-medium text-center">{post.title}</h2>
-						<p class="font-medium text-blue-700">{post.type}</p>
-						<p class="py-3"></p>
-						<img src={post.img} class="h-1/4" />
+			<div>
+				<div class="border border-gray-200 rounded-lg shadow-lg my-16 mx-48">
+					<div class="flex w-full p-20 justify-between">
+						<div class="flex flex-col justify-between mx-3">
+							<div class="flex flex-col">
+								<h2 class="text-4xl font-bold">{post.title}</h2>
+								<h2 class="w-full text-2xl font-bold text-blue-700 text-white">
+									{post.type}
+								</h2>
+							</div>
+							<div class="flex flex-col">
+								<h2 class="text-2xl font-bold">
+									{user.firstName} {user.lastName}
+								</h2>
+								<h2 class="text-lg font-bold">{user.email}</h2>
+							</div>
+							<h2 />
+						</div>
+						<div class="grow flex flex-col justify-between mx-3">
+							<h2 class="text-2xl">{post.description}</h2>
+							<div>
+								<a
+									href={post.link}
+									class="btn bg-blue-700 p-2 text-xl text-white rounded shadow-lg hover:bg-blue-800"
+									target="_blank"
+								>
+									Visit the source
+								</a>
+							</div>
+						</div>
+						<img
+							src={post.img}
+							class="h-full content-right align-right items-right"
+						/>
 					</div>
-				</button>
+				</div>
 			</div>
 		);
 	} else {
