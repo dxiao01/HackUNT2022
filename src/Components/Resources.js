@@ -3,13 +3,13 @@ import React from 'react'
 const Resources = () => {
   return (
     <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl space-y-8">
+      <div class="max-w-5xl space-y-8">
         <div>
           <h2 class="mt-8 text-center text-4xl font-extrabold text-gray-900">Find All Your Information Here.</h2>
         </div>
         <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 text-center">
           <div class="rounded-lg">
-            <label for="search-entry" class="sr-only ">Search Keywords</label>
+            <label for="search-entry" class="sr-only">Search Keywords</label>
             <input id="search-entry" name="search" type="search" required class="w-150 appearance-none rounded-none w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Enter Keywords"/>
           </div>
           <div class="rounded-lg">
@@ -21,27 +21,27 @@ const Resources = () => {
                     <div class="flex flex-col items-center justify-center p-10">
                         <h2 class="text-lg font-medium text-center">What is space exploration?</h2>
                         <p class="font-medium text-blue-700">Video</p>
-                        <p class="text-black">Person 1</p>
-                        <img src={("./").default} />
-                        <img src = "../Space Exploration.jpg"></img>
+                        <p class="text-black">Anonymous</p>
+                        <p class="py-3"></p>
+                        <img src={require('./Pictures/SpaceExploration.jpg')} height={300} width={300}></img>
                     </div>
                 </div>
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg">
                     <div class="flex flex-col items-center justify-center p-10">
-                        <h2 class="text-lg font-medium text-center">What is space exploration?</h2>
-                        <p class="font-medium text-blue-700">Video</p>
-                        <p class="text-black">Person 1</p>
-                        <img src={("./").default} />
-                        <img src = "../Space Exploration.jpg"></img>
+                        <h2 class="text-lg font-medium text-center">UFO Spotted Outside Home In Bentonville, Arkansas, Sources Say.</h2>
+                        <p class="font-medium text-blue-700">News</p>
+                        <p class="text-black">InstaUNT</p>
+                        <p class="py-3"></p>
+                        <img src={require('./Pictures/UFO.jpg')} height={300} width={300}></img>
                     </div>
                 </div>
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg">
                     <div class="flex flex-col items-center justify-center p-10">
-                        <h2 class="text-lg font-medium text-center">What is space exploration?</h2>
-                        <p class="font-medium text-blue-700">Video</p>
-                        <p class="text-black">Person 1</p>
-                        <img src={("./").default} />
-                        <img src = "../Space Exploration.jpg"></img>
+                        <h2 class="text-lg font-medium text-center">Our Universe...</h2>
+                        <p class="font-medium text-blue-700">Website</p>
+                        <p class="text-black">Etash Bhat</p>
+                        <p class="py-3"></p>
+                        <img src={require('./Pictures/SolarSystem.jpg')} height={300} width={300}></img>
                     </div>
                 </div>
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg">
