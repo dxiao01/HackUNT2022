@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
-	const [loggedIn, setLoggedIn] = useState(true);
+	const [loggedIn, setLoggedIn] = useState(false);
 	const [user, setUser] = useState({});
 	const [refreshKey, refresh] = useState("");
 

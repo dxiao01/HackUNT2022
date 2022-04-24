@@ -13,6 +13,14 @@ const Profile = (props) => {
 						<h1 class="text-gray-500 text-sm">
 							Total Points: {props.user.points}
 						</h1>
+						<h1 class="text-gray-600 text-1xl p-2 text-center">
+							Bio: Hi, I am Person XYZ! I love to create and post information
+							about the universe and future space exploration. Reach out to me
+							if you have any questions.
+						</h1>
+						<h1 class="text-gray-600 text-1xl p-2 text-center">
+							(123)456-7890 --OR-- personxyz@gmail.com
+						</h1>
 						<h1 class="text-gray-500 text-sm">Post count: xxx</h1>
 					</div>
 					<div class="flex items-center justify-center pt-10 flex-col">
