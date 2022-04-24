@@ -5,7 +5,7 @@ const Profile = () => {
   <div class="flex items-center justify-center">
     <div class="bg-white w-3/4 mt-10 rounded-lg">
       <div class="flex items-center justify-center pt-10 flex-col">
-        <img src="https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec=s180-rw" class="rounded-full w-32"></img>
+        <img src="../../astronaut.jpg" class="rounded-full w-32"></img>
         <h1 class="text-gray-800 font-extrabold text-3xl mt-5">Username</h1>
         <h1 class="text-gray-500 text-sm">Total Stars: xxx</h1>
         <h1 class="text-gray-500 text-sm">Post count: xxx</h1>
@@ -25,7 +25,7 @@ const Profile = () => {
                         <p class="text-black">Tags: Engineering, Materials</p>
                     </div>  
                     <div>  
-                        <img src = "https://miro.medium.com/max/875/1*DqH7l9EqLJ7xZ-hwZPk1kg.jpeg" class ="h-60 w-60 object-scale-down"></img>
+                        <img src = "../../wheel.jpeg" class ="h-60 w-60 object-scale-down"></img>
                     </div>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ const Profile = () => {
                         <p class="text-black">Tags: Theoretical Physics, Interstellar Travel, Light-Speed</p>
                     </div>  
                     <div>  
-                        <img src = "https://miro.medium.com/max/875/1*DHLt521JHDZeybE6qfnLqA.jpeg" class =" h-60 w-60 object-scale-down"></img>
+                        <img src = "../../mega engine.jpeg" class =" h-60 w-60 object-scale-down"></img>
                     </div>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ const Profile = () => {
                         <p class="text-black">Tags: Mars, Robotic Exploration, Mapping</p>
                     </div>  
                     <div>  
-                        <img src = "https://static.scientificamerican.com/sciam/cache/file/2EDA8A7F-C06F-49B2-ACEA1AEA69A15589_source.jpg?w=590&h=800&CFEB2D18-8C72-4008-BCFC619CB7017412" class =" h-60 w-60 object-scale-down"></img>
+                        <img src = "../../mars.png" class =" h-60 w-60 object-scale-down"></img>
                     </div>
                   </div>
                 </div>
