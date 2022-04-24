@@ -5,11 +5,10 @@ import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
     return (
         
-<nav class="bg-gray-800 w-full ">
+<nav class="bg-gray-800 w-full">
   <div class="max-w-7xl mx-auto px-2">
-    <div class="relative flex items-center justify-between h-16">
+    <div class="relative flex items-center justify-between h-20">
       <div class="flex-1 flex items-center justify-start">
-        
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
           <Link to="/" class="text-gray-300 px-3 py-1 rounded-md text-2xl font-extrabold">
@@ -35,9 +34,6 @@ const Navbar = () => {
         <a href="#Logout" class=" text-gray-800 bg-white px-3 py-2 rounded-md text-lg font-medium ml-5">Logout</a>
     </div>
   </div>
-
- 
-  
   </div>
 </nav>
     )
