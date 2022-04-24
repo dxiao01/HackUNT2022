@@ -62,7 +62,6 @@ const Home = () => {
 						<div class="flex flex-col items-center justify-center p-10">
 							<h2 class="text-lg font-medium">Daniel Xiao</h2>
 							<p class="font-medium text-blue-500">Frontend Designer </p>
-							<p class="text-black">Task 1</p>
 						</div>
 					</div>
 					<div
@@ -72,7 +71,6 @@ const Home = () => {
 						<div class="flex flex-col items-center justify-center p-10">
 							<h2 class="text-lg font-medium">Dhruv Chanana</h2>
 							<p class="font-medium text-blue-500">Backend Developer</p>
-							<p class="text-black">Task 2</p>
 						</div>
 					</div>
 					<div
@@ -82,7 +80,6 @@ const Home = () => {
 						<div class="flex flex-col items-center justify-center p-10">
 							<h2 class="text-lg font-medium">Jathin Pranav Singaraju</h2>
 							<p class="font-medium text-blue-500">Frontend Designer</p>
-							<p class="text-black">Task 3</p>
 						</div>
 					</div>
 					<div
