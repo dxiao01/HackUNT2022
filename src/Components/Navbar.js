@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
     return (
         
-<nav class="bg-gray-800 fixed w-full">
+<nav class="bg-gray-800 w-full ">
   <div class="max-w-7xl mx-auto px-2">
     <div class="relative flex items-center justify-between h-16">
       <div class="flex-1 flex items-center justify-start">
