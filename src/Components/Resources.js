@@ -15,7 +15,7 @@ const Resources = () => {
           <p class="py-3"></p>
           <div class="text-center">
               <input type="checkbox" id="task1" name="task1" value="1"></input>
-              <label class="pr-10 pl-2" for="task">News</label>
+              <label class="pr-10 pl-2" for="task">News Articles</label>
               <input type="checkbox" id="task2" name="task2" value="2"></input>
               <label class="pr-10 pl-2"  for="task">Videos</label>
               <input type="checkbox" id="task3" name="task3" value="3"></input>
@@ -56,20 +56,11 @@ const Resources = () => {
                 </div>
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg">
                     <div class="flex flex-col items-center justify-center p-10">
-                        <h2 class="text-lg font-medium text-center">What is space exploration?</h2>
+                        <h2 class="text-lg font-medium text-center">Space And Future Technology.</h2>
                         <p class="font-medium text-blue-700">Video</p>
-                        <p class="text-black">Person 1</p>
-                        <img src={("./").default} />
-                        <img src = "../Space Exploration.jpg"></img>
-                    </div>
-                </div>
-                <div class="w-full border border-gray-200 rounded-lg shadow-lg">
-                    <div class="flex flex-col items-center justify-center p-10">
-                        <h2 class="text-lg font-medium text-center">What is space exploration?</h2>
-                        <p class="font-medium text-blue-700">Video</p>
-                        <p class="text-black">Person 1</p>
-                        <img src={("./").default} />
-                        <img src = "../Space Exploration.jpg"></img>
+                        <p class="text-black">Sree Akkina</p>
+                        <p class="py-3"></p>
+                        <img src={require('./Pictures/FutureTech.jpg')} height={300} width={300}></img>
                     </div>
                 </div>
             </div>

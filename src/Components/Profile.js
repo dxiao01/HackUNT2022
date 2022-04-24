@@ -3,15 +3,14 @@ import React from 'react'
 const Profile = () => {
   return (
   <div class="flex items-center justify-center">
-    <div class="bg-white w-3/4 mt-10 rounded-lg">
+    <div class="bg-white rounded-lg">
       <div class="flex items-center justify-center pt-10 flex-col">
         <img src="../../astronaut.jpg" class="rounded-full w-32"></img>
-        <h1 class="text-gray-800 font-extrabold text-3xl mt-5">Username</h1>
-        <h1 class="text-gray-500 text-sm">Total Stars: xxx</h1>
-        <h1 class="text-gray-500 text-sm">Post count: xxx</h1>
-        <h1 class="text-gray-500 text-sm p-4 text-center">
-          bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </h1>
+        <h1 class="text-gray-800 font-extrabold text-3xl mt-2">Person XYZ</h1>
+        <h1 class="text-gray-600 p-2 text-1xl">Total Stars: 15</h1>
+        <h1 class="text-gray-600 p-2 text-1xl">Post Count: 3</h1>
+        <h1 class="text-gray-600 text-1xl p-2 text-center">Bio: Hi, I am Person XYZ! I love to create and post information about the universe and future space exploration. Reach out to me if you have any questions.</h1>
+        <h1 class="text-gray-600 text-1xl p-2 text-center">(123)456-7890 --OR-- personxyz@gmail.com</h1>
       </div>
       <div class="flex items-center justify-center pt-10 flex-col">
         <h1 class = "text-gray-800 font-extrabold text-3xl mt-5">Posts</h1>
@@ -29,8 +28,6 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-      
-                   
                 <div class="w-full  border-gray-200 rounded-lg shadow-lg">
                   <div class="flex justify-between p-10 max-h-80">
                     <div class="flex flex-col items-left justify-left p-10">
@@ -43,7 +40,6 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div class="w-full  border-gray-200 rounded-lg shadow-lg">
                   <div class="flex justify-between p-10 max-h-80">
                     <div class="flex flex-col items-left justify-left p-10">
@@ -56,13 +52,10 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-    
             </div>
-    
         </div>
       </div>
     </div>
-
 </div>
 
 
