@@ -12,7 +12,7 @@ const Home = () => {
 	}, []);
 	defineCustomElements(window);
 	return (
-		<div class="h-full mb-4 scrollbar-hide bg-gray-900">
+		<div class="h-full py-8 scrollbar-hide bg-gray-900">
 			<shooting-stars
 				image={star}
 				height="5"
@@ -46,7 +46,7 @@ const Home = () => {
 				websites, allowing users to contribute to information by creating
 				videos/websites, and gamifying the process of learning.
 			</div>
-			<div class="max-w-6xl px-12 mx-auto text-center mb-10">
+			<div class="max-w-6xl px-12 mx-auto text-center">
 				<div class="space-y-12 md:text-center" data-aos="fade-up">
 					<div class="max-w-3xl mb-10 space-y-5 sm:mx-auto sm:space-y-4">
 						<h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl mt-10 text-white">

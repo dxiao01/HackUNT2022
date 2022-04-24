@@ -1,20 +1,26 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Signup = () => {
+	const navigate = useNavigate();
+
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+
 	const onSubmit = (event) => {
 		event.preventDefault();
 		const data = {
 			email,
 			password,
+			firstName,
+			lastName,
 		};
 
 		axios.post("/auth/register", data).then((res) => {
-			console.log(res);
+			navigate("/login");
 		});
 	};
 
