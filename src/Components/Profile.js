@@ -17,20 +17,44 @@ const Profile = () => {
         <h1 class = "text-gray-800 font-extrabold text-3xl mt-5">Posts</h1>
         <div class="w-full px-12 mx-auto text-center">
             <div class="grid grid-cols-1">
-                <div class="w-3000 border-gray-200 rounded-lg shadow-lg">
-    
+                <div class="w-full  border-gray-200 rounded-lg shadow-lg">
+                  <div class="flex justify-between p-10 max-h-80">
                     <div class="flex flex-col items-left justify-left p-10">
                         <h2 class="text-lg font-medium">How NASA Reinvented The Wheel</h2>
                         <p class="font-medium text-grey-100">Article</p>
-                        <p class="text-black">Tags: Engineering, Materials
-                    </p></div>
-
+                        <p class="text-black">Tags: Engineering, Materials</p>
+                    </div>  
+                    <div>  
+                        <img src = "https://miro.medium.com/max/875/1*DqH7l9EqLJ7xZ-hwZPk1kg.jpeg" class ="h-60 w-60 object-scale-down"></img>
+                    </div>
+                  </div>
+                </div>
+      
+                   
+                <div class="w-full  border-gray-200 rounded-lg shadow-lg">
+                  <div class="flex justify-between p-10 max-h-80">
                     <div class="flex flex-col items-left justify-left p-10">
                         <h2 class="text-lg font-medium">MEGA Drive — the Tech That Promises Near Light-Speed Travel!</h2>
                         <p class="font-medium text-grey-100">Article</p>
-                        <p class="text-black">Tags: Theoretical Physics, Interstellar Travel, Faster-Than-Light
-                    </p></div>
-
+                        <p class="text-black">Tags: Theoretical Physics, Interstellar Travel, Light-Speed</p>
+                    </div>  
+                    <div>  
+                        <img src = "https://miro.medium.com/max/875/1*DHLt521JHDZeybE6qfnLqA.jpeg" class =" h-60 w-60 object-scale-down"></img>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="w-full  border-gray-200 rounded-lg shadow-lg">
+                  <div class="flex justify-between p-10 max-h-80">
+                    <div class="flex flex-col items-left justify-left p-10">
+                        <h2 class="text-lg font-medium">NASA’s Perseverance Rover arrives at delta for new science campaign</h2>
+                        <p class="font-medium text-grey-100">News</p>
+                        <p class="text-black">Tags: Mars, Robotic Exploration, Mapping</p>
+                    </div>  
+                    <div>  
+                        <img src = "https://static.scientificamerican.com/sciam/cache/file/2EDA8A7F-C06F-49B2-ACEA1AEA69A15589_source.jpg?w=590&h=800&CFEB2D18-8C72-4008-BCFC619CB7017412" class =" h-60 w-60 object-scale-down"></img>
+                    </div>
+                  </div>
                 </div>
     
             </div>
