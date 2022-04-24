@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { defineCustomElements } from 'shooting-stars/dist/loader';
+import star from "./star.png"
 
 const Home = () => {
     useEffect(() => {
@@ -9,8 +10,11 @@ const Home = () => {
           duration : 2000
         });
       }, []);
+      defineCustomElements(window);
   return (
-    <div class="h-full mb-4 bg-white">
+    
+    <div class="h-full mb-4 scrollbar-hide">
+        <shooting-stars image={star} height="'10px'" width="10" min-speed="10" max-speed="20" num="100"></shooting-stars>
         <div class="text-center text-7xl font-extrabold mt-10" data-aos="fade-up">
             Spaceverse
         </div>
@@ -26,54 +30,35 @@ const Home = () => {
                     <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl mt-10">About Us</h2>
                 </div>
             </div>
-    
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg bg-slate-200" data-aos="flip-down">
-    
                     <div class="flex flex-col items-center justify-center p-10">
                         <h2 class="text-lg font-medium">Daniel Xiao</h2>
                         <p class="font-medium text-blue-500">Frontend Designer </p>
                         <p class="text-black">Task 1
                     </p></div>
-    
                 </div>
-    
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg bg-slate-200" data-aos="flip-down">
-    
                     <div class="flex flex-col items-center justify-center p-10">
                         <h2 class="text-lg font-medium">Dhruv Chanana</h2>
                         <p class="font-medium text-blue-500">Backend Developer</p>
                         <p class="text-black">Task 2
                     </p></div>
-    
-    
                 </div>
-    
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg bg-slate-200" data-aos="flip-down">
-    
                     <div class="flex flex-col items-center justify-center p-10">
                         <h2 class="text-lg font-medium">Jathin Pranav Singaraju</h2>
                         <p class="font-medium text-blue-500">Frontend Designer</p>
                         <p class="text-black">Task 3
                     </p></div>
-    
-    
                 </div>
-    
                 <div class="w-full border border-gray-200 rounded-lg shadow-lg bg-slate-200" data-aos="flip-down">
-    
                     <div class="flex flex-col items-center justify-center p-10">
                         <h2 class="text-lg font-medium">James Yang</h2>
                         <p class="font-medium text-blue-500">Logistics</p>
-                        <p class="text-black">Task 4
-                    </p></div>
-    
-    
+                        </div>
                 </div>
-    
-    
             </div>
-    
         </div>
     </div>
   )
